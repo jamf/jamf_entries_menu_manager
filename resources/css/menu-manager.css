@@ -1,0 +1,46 @@
+/* overall wrapper layout */
+
+.dropdown__wrapper {
+	display: grid;
+	gap: 10px;
+}
+
+.dropdown__wrapper.column-width-2,
+.dropdown__wrapper.column-width-3 {
+	grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 900px) {
+	.dropdown__wrapper.column-width-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.dropdown__wrapper.column-width-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.dropdown:has(.dropdown__wrapper.column-width-3) {
+		max-width: 900px;
+	}
+}
+
+/* tree styles */
+
+/* only indent child channels if they follow a title or channel */
+/* i.e. don't indent child channels if the user doesn't have access to the parent channel */
+.dropdown-item-wrapper.has-children p + .child-wrapper,
+.dropdown-item-wrapper.has-children .dropdown__item + .child-wrapper {
+	margin-left: 20px;
+}
+
+/* Title text */
+.dropdown-item-wrapper.type-title p {
+	font-weight: bold;
+	padding: 5px 20px;
+}
+
+/* hide any parent titles that are supposed to have child channels, but don't */
+/* i.e. don't show titles if the user doesn't have access to any of the child channels */
+.type-title.has-children:has(.child-count-0) {
+	display: none;
+}

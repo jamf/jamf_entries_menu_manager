@@ -1,0 +1,86 @@
+.menu-manager {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+
+ol.sortable {
+	list-style-type: none;
+	border: 2px dashed #bbb;
+	border-radius: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+
+ol.sortable ol {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 20px;
+}
+
+ol.sortable li {
+	margin: 0 3px 3px 3px;
+	padding-left: 20px;
+	font-size: 16px;
+}
+
+ol.sortable .ui-state-highlight {
+	height: 30px;
+}
+
+ol.sortable .mjs-nestedSortable-error {
+	background-color: #f2b5b5;
+	border: solid 1px #c16060;
+}
+
+ol.sortable .title input {
+	display: inline-block;
+	width: 50%;
+	padding: 0 4px;
+	margin-left: 5px;
+}
+
+ol.sortable .channel {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+ol.sortable .channel:hover {
+	background-color: rgba(221, 221, 221, 1);
+}
+
+ol.sortable .channel.ui-sortable-helper {
+	background-color: rgba(221, 221, 221, 0.5);
+}
+
+ol.sortable .channel .channel-name {
+	padding-left: 9px;
+}
+
+ol.sortable #text-template_0 {
+	display: none;
+}
+
+ol.sortable span.handle:hover {
+	cursor: move;
+}
+
+ol.sortable span.add-title:hover,
+ol.sortable span.remove-title:hover {
+	cursor: pointer;
+}
+
+ol.sortable span.add-title,
+ol.sortable span.remove-title {
+	margin-left: 5px;
+}
+
+/* hide add-title on child channels */
+ol.sortable li ol .add-title {
+	display: none;
+}
+
+#emm-instructions {
+	padding-bottom: 20px;
+}
