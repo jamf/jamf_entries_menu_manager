@@ -1,3 +1,5 @@
+/* Copyright 2023, Jamf */
+
 .menu-manager {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

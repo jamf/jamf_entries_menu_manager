@@ -1,5 +1,7 @@
 <?php
 
+// Copyright 2023, Jamf
+
 if (! defined('ENTRIES_MENU_MANAGER_VERSION')) {
     define('ENTRIES_MENU_MANAGER_VERSION', '1.0.0');
     define('ENTRIES_MENU_MANAGER_NAME', 'Entries Menu Manager');

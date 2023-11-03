@@ -1,3 +1,5 @@
+<!-- Copyright 2023, Jamf -->
+
 <h1>Entries Menu Manager</h1>
 
 <?=ee('CP/Alert')->get($alerts_name)?>

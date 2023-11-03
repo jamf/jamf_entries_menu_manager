@@ -1,17 +1,17 @@
 <?php
 
-if (!defined('BASEPATH')) {
-    exit('No direct script access allowed');
-}
-
 /**
  * @package     ExpressionEngine
  * @subpackage  Modules
  * @category    Entries Menu Manager
  * @author      Eric Swierczek
- * @copyright   Copyright (c) 2023 - Jamf
+ * @copyright   Copyright 2023, Jamf
  * @license     MIT
  */
+
+if (!defined('BASEPATH')) {
+    exit('No direct script access allowed');
+}
 
 require_once PATH_THIRD . 'entries_menu_manager/addon.setup.php';
 

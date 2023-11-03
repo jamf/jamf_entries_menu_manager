@@ -1,3 +1,5 @@
+// Copyright 2023, Jamf
+
 var $section = $('.ee-sidebar__items-section');
 var $entries = $section.find('.ee-sidebar__item[title="Entries"]');
 var $entriesList = $('.navigation-submenu').first();

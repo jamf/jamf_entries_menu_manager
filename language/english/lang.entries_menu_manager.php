@@ -1,4 +1,7 @@
 <?php
+
+// Copyright 2023, Jamf
+
 if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }

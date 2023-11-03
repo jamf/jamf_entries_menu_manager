@@ -1,3 +1,5 @@
+// Copyright 2023, Jamf
+
 $(document).ready(function() {
 	$('.sortable').nestedSortable({
 		handle: '.handle',
