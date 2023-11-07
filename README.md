@@ -1,5 +1,5 @@
 # Entries Menu Manager
-ExpressionEngine add-on to rearrange the Entries Menu (Channel list) in the CMS
+ExpressionEngine add-on to rearrange the Entries Menu (Channel list) in the CMS. Compatible with EE6 and EE7.
 
 ## Installation
 
