@@ -7,7 +7,7 @@ if (! defined('ENTRIES_MENU_MANAGER_VERSION')) {
     define('ENTRIES_MENU_MANAGER_NAME', 'Entries Menu Manager');
     define('ENTRIES_MENU_MANAGER_EXT', 'Entries_menu_manager_ext');
     define('ENTRIES_MENU_MANAGER_DESC', 'Manage the entries menu');
-    define('ENTRIES_MENU_MANAGER_DOCS', 'https://github.com/jamf/entries-menu-manager');
+    define('ENTRIES_MENU_MANAGER_DOCS', 'https://github.com/jamf/entries_menu_manager');
 }
 
 return [
