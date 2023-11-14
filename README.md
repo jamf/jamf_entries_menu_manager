@@ -36,3 +36,7 @@ Click and drag to rearrange Channels/Titles or to nest Channels, and click **Sav
   * *i.e. if they do not have access to a parent channel, then any child channels become root nodes. And if they do not have access to all child channels of a Title, then the Title is hidden too.*
 * If new channels are added to the CMS, they are automatically added to the bottom of the first column. They can then be rearranged via the add-on Settings.
 * If existing channels are removed from the CMS, they will be removed from the Entries menu as expected. Nesting will automatically resolve itself, depending on any parent/children that Channel had.
+
+## Contributing
+
+PRs are welcome to add new features or fix bugs. Approvals are required by the @jamf/dotcom-maintainer team. You can also open an Issue for features that warrant further discussion.
