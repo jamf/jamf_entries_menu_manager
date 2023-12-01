@@ -9,17 +9,17 @@ This will be available in the ExpressionEngine add-on store soon. Until then, a 
 
 Unzip the file into the `/system/user/addons/` directory. The directory may need to be renamed to `entries_menu_manager`.
 
-Go to the admin panel > Add-ons, and then click **Install** next to **Entries Menu Manager**.
+Go to the Control Panel > Add-ons, and then click **Install** next to **Entries Menu Manager**.
 
 <img width="388" alt="image" src="https://github.com/jamf/entries-menu-manager/assets/2423727/ccac054d-7d1c-40bb-b644-0730ee8d44df">
 
 ## Usage
 
-To manage the order of the Entries menu, either click the Entries Menu Manager add-on or click the gear icon > Settings.
+To manage the order of the Entries menu, either click the add-on or click the gear icon and then click Settings to open the Settings page.
 
 <img width="492" alt="image" src="https://github.com/jamf/entries-menu-manager/assets/2423727/207d18a8-b547-492f-a66f-4e74592bef3e">
 
-Either of these paths will load the Settings page, where the Channel order for the Entries menu can be restructured into 1-3 columns, with optional nesting and Titles to further organize the channels.
+On the Settings page, the Channel order for the Entries menu can be restructured and additional organizational options such as nesting are available.
 
 Click and drag to rearrange Channels/Titles or to nest Channels, and click **Save** to save that order for all CMS users. JavaScript will run on each page load to rearrange the Entries menu based on the saved order. To revert back to the default Channel order (Alphabetical), click the **Reset to default layout** button, and the saved order will be reset.
 
@@ -31,9 +31,9 @@ Click and drag to rearrange Channels/Titles or to nest Channels, and click **Sav
 
 * Channels can be reorganized into 1-3 columns.
 * Channels can be rearranged in a custom order. They must be either root-level or nested one level under another Channel or under a Title.
-* Custom titles can be added to output text in the Entries menu. Titles must be root-level, must not be blank, and must have at least one child Channel.
+* Custom titles can be added to output text in the Entries menu. Titles must be root-level, have at least one Channel, and not be blank.
 * If a user does not have access to a given channel, the nesting will automatically resolve itself in the Entries menu.
-  * *i.e. if they do not have access to a parent channel, then any child channels become root nodes. And if they do not have access to all child channels of a Title, then the Title is hidden too.*
+  * *i.e. If they do not have access to a parent channel, then any child channels become root nodes. If they do not have access to all child channels of a Title, then the entire Title is hidden.*
 * If new channels are added to the CMS, they are automatically added to the bottom of the first column. They can then be rearranged via the add-on Settings.
 * If existing channels are removed from the CMS, they will be removed from the Entries menu as expected. Nesting will automatically resolve itself, depending on any parent/children that Channel had.
 
