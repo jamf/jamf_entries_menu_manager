@@ -1,6 +1,6 @@
 <!-- Copyright 2023, Jamf -->
 
-<h1>Entries Menu Manager</h1>
+<h1><?= lang('jamf_entries_menu_manager'); ?></h1>
 
 <?=ee('CP/Alert')->get($alerts_name)?>
 

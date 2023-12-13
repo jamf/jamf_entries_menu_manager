@@ -1,15 +1,13 @@
-# Entries Menu Manager
+# Jamf Entries Menu Manager
 ExpressionEngine add-on to rearrange the Entries Menu (Channel list) in the CMS. Compatible with EE6 and EE7.
 
 ## Installation
 
-This will be available in the ExpressionEngine add-on store soon. Until then, a .zip file of this repository can be downloaded directly from GitHub.
+A .zip file of this repository can be downloaded directly from GitHub.
 
-<img width="404" alt="image" src="https://github.com/jamf/entries-menu-manager/assets/2423727/2f327621-bfbe-478f-b3bf-af659dd5e0f4">
+Unzip the file into the `/system/user/addons/` directory. The directory may need to be renamed to `jamf_entries_menu_manager`.
 
-Unzip the file into the `/system/user/addons/` directory. The directory may need to be renamed to `entries_menu_manager`.
-
-Go to the Control Panel > Add-ons, and then click **Install** next to **Entries Menu Manager**.
+Go to the Control Panel > Add-ons, and then click **Install** next to **Jamf Entries Menu Manager**.
 
 <img width="388" alt="image" src="https://github.com/jamf/entries-menu-manager/assets/2423727/ccac054d-7d1c-40bb-b644-0730ee8d44df">
 
@@ -21,7 +19,7 @@ To manage the order of the Entries menu, either click the add-on or click the ge
 
 On the Settings page, the Channel order for the Entries menu can be restructured and additional organizational options such as nesting are available.
 
-Click and drag to rearrange Channels/Titles or to nest Channels, and click **Save** to save that order for all CMS users. JavaScript will run on each page load to rearrange the Entries menu based on the saved order. To revert back to the default Channel order (Alphabetical), click the **Reset to default layout** button, and the saved order will be reset.
+Click and drag to rearrange Channels/Titles or to nest Channels, and click **Save** to save that order for all CMS users. JavaScript will run on each Control Panel page load to rearrange the Entries menu based on the saved order. To revert back to the default Channel order (Alphabetical), click the **Reset to default layout** button, and the saved order will be reset.
 
 <img width="1237" alt="image" src="https://github.com/jamf/entries_menu_manager/assets/2423727/6416d66c-37dc-4eae-92c4-2e0a4054eaa0">
 

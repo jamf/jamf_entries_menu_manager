@@ -3,7 +3,7 @@
 /**
  * @package     ExpressionEngine
  * @subpackage  Modules
- * @category    Entries Menu Manager
+ * @category    Jamf Entries Menu Manager
  * @author      Eric Swierczek
  * @copyright   Copyright 2023, Jamf
  * @license     MIT
@@ -13,9 +13,9 @@ if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
 
-require_once PATH_THIRD . 'entries_menu_manager/addon.setup.php';
+require_once PATH_THIRD . 'jamf_entries_menu_manager/addon.setup.php';
 
-class Entries_menu_manager_ext
+class Jamf_entries_menu_manager_ext
 {
     const TITLE = 'title';
     const CHANNEL = 'channel';
@@ -23,17 +23,17 @@ class Entries_menu_manager_ext
     /**
      * @var string
      */
-    public $description = ENTRIES_MENU_MANAGER_DESC;
+    public $description = JAMF_ENTRIES_MENU_MANAGER_DESC;
 
     /**
      * @var string
      */
-    public $docs_url = ENTRIES_MENU_MANAGER_DOCS;
+    public $docs_url = JAMF_ENTRIES_MENU_MANAGER_DOCS;
 
     /**
      * @var string
      */
-    public $name = ENTRIES_MENU_MANAGER_NAME;
+    public $name = JAMF_ENTRIES_MENU_MANAGER_NAME;
 
     /**
      * @var array
@@ -48,7 +48,7 @@ class Entries_menu_manager_ext
     /**
      * @var integer
      */
-    public $version = ENTRIES_MENU_MANAGER_VERSION;
+    public $version = JAMF_ENTRIES_MENU_MANAGER_VERSION;
 
     /**
      * @var array
@@ -117,8 +117,8 @@ class Entries_menu_manager_ext
     public function settings_form($settings)
     {
         $vars = [
-            'save_url' => ee('CP/URL')->make('addons/settings/entries_menu_manager/save'),
-            'alerts_name' => 'entries-menu-manager-save',
+            'save_url' => ee('CP/URL')->make('addons/settings/jamf_entries_menu_manager/save'),
+            'alerts_name' => 'jamf-entries-menu-manager-save',
             'instructions' => lang('instructions'),
             'channels' => $this->getAllChannels(),
             'treeData' => $this->getTreeData(),
@@ -136,7 +136,7 @@ class Entries_menu_manager_ext
         ee()->cp->add_to_foot('<script>' . $this->getFile('js/jquery.mjs.nestedSortable.js') . '</script>');
         ee()->cp->add_to_foot('<script>' . $this->getFile('js/edit.js') . '</script>');
 
-        return ee('View')->make('entries_menu_manager:menu-manager')->render($vars);
+        return ee('View')->make('jamf_entries_menu_manager:menu-manager')->render($vars);
     }
 
     /**
@@ -151,7 +151,7 @@ class Entries_menu_manager_ext
         /** @var \ExpressionEngine\Model\Addon\Extension $model */
         $model = ee('Model')->get('Extension')
             ->filter('enabled', 'y')
-            ->filter('class', ENTRIES_MENU_MANAGER_EXT)
+            ->filter('class', JAMF_ENTRIES_MENU_MANAGER_EXT)
             ->first();
 
         $allChannels = $this->getAllChannels();
@@ -262,7 +262,7 @@ class Entries_menu_manager_ext
      */
     private function getFile(string $file): string
     {
-        return file_get_contents(PATH_THIRD .'entries_menu_manager/resources/' . $file);
+        return file_get_contents(PATH_THIRD .'jamf_entries_menu_manager/resources/' . $file);
     }
 
     /**
@@ -277,7 +277,7 @@ class Entries_menu_manager_ext
         /** @var \ExpressionEngine\Model\Addon\Extension $model */
         $model = ee('Model')->get('Extension')
             ->filter('enabled', 'y')
-            ->filter('class', ENTRIES_MENU_MANAGER_EXT)
+            ->filter('class', JAMF_ENTRIES_MENU_MANAGER_EXT)
             ->all();
 
         $reset = $_POST['submit'] === 'reset';
@@ -291,12 +291,12 @@ class Entries_menu_manager_ext
         $model->settings = $_POST;
         $model->save();
 
-        ee('CP/Alert')->makeInline('entries-menu-manager-save')
+        ee('CP/Alert')->makeInline('jamf-entries-menu-manager-save')
             ->asSuccess()
             ->withTitle(lang('preferences_updated'))
             ->defer();
 
-        ee()->functions->redirect(ee('CP/URL')->make('addons/settings/entries_menu_manager'));
+        ee()->functions->redirect(ee('CP/URL')->make('addons/settings/jamf_entries_menu_manager'));
     }
 
     /**
@@ -308,7 +308,7 @@ class Entries_menu_manager_ext
     {
         foreach(['cp_css_end', 'cp_js_end'] as $hook) {
             $data = array(
-                'class'     => ENTRIES_MENU_MANAGER_EXT,
+                'class'     => JAMF_ENTRIES_MENU_MANAGER_EXT,
                 'method'    => $hook,
                 'hook'      => $hook,
                 'settings'  => '',
@@ -332,7 +332,7 @@ class Entries_menu_manager_ext
     public function disable_extension()
     {
         ee()->db
-            ->where('class', ENTRIES_MENU_MANAGER_EXT)
+            ->where('class', JAMF_ENTRIES_MENU_MANAGER_EXT)
             ->delete('extensions');
 
         return true;
