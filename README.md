@@ -5,17 +5,19 @@ ExpressionEngine add-on to rearrange the Entries Menu (Channel list) in the CMS.
 
 A .zip file of this repository can be downloaded directly from GitHub.
 
+<img width="412" alt="image" src="https://github.com/jamf/jamf_entries_menu_manager/assets/2423727/9e9850e2-d525-40a3-bdac-cbfc4312162d">
+
 Unzip the file into the `/system/user/addons/` directory. The directory may need to be renamed to `jamf_entries_menu_manager`.
 
 Go to the Control Panel > Add-ons, and then click **Install** next to **Jamf Entries Menu Manager**.
 
-<img width="388" alt="image" src="https://github.com/jamf/entries-menu-manager/assets/2423727/ccac054d-7d1c-40bb-b644-0730ee8d44df">
+<img width="333" alt="image" src="https://github.com/jamf/jamf_entries_menu_manager/assets/2423727/93b0464c-63fd-4079-b168-a065c41c357f">
 
 ## Usage
 
 To manage the order of the Entries menu, either click the add-on or click the gear icon and then click Settings to open the Settings page.
 
-<img width="492" alt="image" src="https://github.com/jamf/entries-menu-manager/assets/2423727/207d18a8-b547-492f-a66f-4e74592bef3e">
+<img width="423" alt="image" src="https://github.com/jamf/jamf_entries_menu_manager/assets/2423727/c8d7c761-5953-4ca5-9c60-c3670e5fdaf7">
 
 On the Settings page, the Channel order for the Entries menu can be restructured and additional organizational options such as nesting are available.
 
